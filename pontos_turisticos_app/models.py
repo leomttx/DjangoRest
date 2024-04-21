@@ -11,7 +11,7 @@ class PontoTuristico(models.Model):
     atracoes = models.ManyToManyField(Atracao)
     avaliacoes = models.ManyToManyField(Avaliacao)
     comentarios = models.ManyToManyField(Comentario)
-    endereco = models.ForeignKey(Endereco, on_delete=models.CASCADE)
+    endereco = models.ForeignKey(Endereco, on_delete=models.CASCADE, null=True, blank=True)
 
 
     def __str__(self):
